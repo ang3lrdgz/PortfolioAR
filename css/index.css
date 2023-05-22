@@ -334,7 +334,7 @@ input:checked~.toogle {
     opacity: 1;
 }
 .header-image img{
-    height: 100vh;
+    height: 90vh;
     float: right;
     margin-top: 6vh;
 }
@@ -1998,7 +1998,7 @@ for tabs and large phones
 
 
 
-@media all and (max-width: 1025px) and (min-width: 551px){
+@media all and (max-width: 1023.9px) and (min-width: 551px){
     .header-content{
         height: 100vh;
         width: 100%;
@@ -2039,7 +2039,7 @@ for tabs and large phones
         display: block;
     }
     #breaker{
-        height: 50vh;
+        height: 100vh;
         width: 200%;
         background-color: #04A777;
         opacity: 1;
@@ -2048,6 +2048,9 @@ for tabs and large phones
         transition: all .4s ease;
         z-index: 10;
         position: fixed;
+    }
+    .language {
+        left: 8%;
     }
     @keyframes breakeranimate{
        0%{ transform : translateX(-100%)}

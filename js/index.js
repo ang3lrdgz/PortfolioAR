@@ -140,19 +140,8 @@ $(function(){
     gsap.to( $cursor,{
      scale:1.4,
      opacity:1
-    })
-    
-  }
-  function cursor(e){
-    gsap.to( $cursor, {
-     scale:1,
-     opacity:.6
     }) 
   }
-  $(window).on('mousemove',cursormover);
-  $('.menubar').hover(cursorhover,cursor);
-  $('a').hover(cursorhover,cursor);
-  $('.navigation-close').hover(cursorhover,cursor);
 
 })
 // Agrega el evento de click al icono
