@@ -137,11 +137,11 @@ body{
     background-color: #000000;
 }
 #navigation-bar.scrolled {
-    background-color: #171717ab;
+    background-color: #171717c8;
     transition: 1s ease;
 }
 #navigation-bar.light.scrolled {
-    background-color: #f8f8f89e;
+    background-color: #f8f8f8be;
     transition: 1s ease;
 }
 .language {
@@ -1664,8 +1664,8 @@ For devices with smaller width like mobile phone
         flex-direction: column-reverse;
     }
     .about-img img{
-        width: 380px;
-        height: 320px;
+        width: 280px;
+        height: 242px;
         padding: 5px;
         border-radius: 10%;
     }
