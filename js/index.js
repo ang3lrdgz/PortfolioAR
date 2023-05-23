@@ -162,7 +162,7 @@ const navigationCloseElement = document.querySelector('.navigation-close');
 const aboutElement = document.querySelector('#about');
 const portfolioElement = document.querySelector('#portfolio');
 const contactElement = document.querySelector('#contact');
-const linksElement = document.querySelector('.links');
+const textWhiteElement = document.querySelectorAll('.text-white');
 const skillsElement = document.querySelector('#skills');
 const footerElement = document.querySelector('.footer');
 
@@ -175,7 +175,9 @@ btnMode.addEventListener('click', () => {
   aboutElement.classList.toggle('light');
   portfolioElement.classList.toggle('light');
   contactElement.classList.toggle('light');
-  linksElement.classList.toggle('light');
+  textWhiteElement.forEach((white) => {
+    white.classList.toggle('light');
+  });
   skillsElement.classList.toggle('light');
   footerElement.classList.toggle('light');
 });

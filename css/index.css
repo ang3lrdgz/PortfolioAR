@@ -623,7 +623,7 @@ input:checked~.toogle {
 }
 #about.light {
     transition: .8s ease-in-out;
-    background: #fff;
+    background: #f8f8f8;
 }
 @keyframes scale{
     0%{
@@ -738,6 +738,7 @@ input:checked~.toogle {
     display: flex;
     flex-direction: column;
     font-family: poppins;
+    margin-left: 60px;
 
 }
 .cv a button{
@@ -1134,7 +1135,7 @@ input:checked~.toogle {
 }
 #portfolio.light {
     transition: .8s ease-in-out;
-    background: #fff;
+    background: #f8f8f8;
 }
 .blog-header{
     height: auto;
@@ -1274,7 +1275,7 @@ input:checked~.toogle {
 }
 #contact.light {
     transition: .8s ease-in-out;
-    background: #fff;
+    background: #f8f8f8;
 }
 .contact-header{
     height: auto;
@@ -1441,21 +1442,20 @@ form button:hover{
     padding:15px;
     font-family: poppins;
 }
-.links {
+.text-white {
     color: #f8f8f8;
+}
+.links {
     text-decoration: none;
 }
-.links.light {
+.text-white.light {
     color: #171717;
 }
-.links:hover {
+.text-white:hover {
     color: #171717;
 }
-.links.light:hover {
+.text-white.light:hover {
     color: #f8f8f8;
-}
-#contact.light .contact-info-icon-text{
-    color: #171717;
 }
 .contact-info-icon-text h6{
     font-size: 15px;
@@ -1487,12 +1487,11 @@ form button:hover{
     justify-content: space-between;
     font-family: poppins;
   }
-  
+
   .footer.light {
-    background: #04A777;
     color: #171717;
   }
-  
+
   .footer .footer-text {
     font-size: 18px;
     font-weight: 400;
@@ -2164,9 +2163,11 @@ for tabs and large phones
         z-index: 2;
         text-align: center;
         height: auto;
-        padding-right: 0px;
+        padding-right: 66vh;
         width: auto;
-    
+    }
+    .header-image img{
+        height: 78vh;
     }
     #about-content{
         display: flex;
@@ -2272,7 +2273,7 @@ for tabs and large phones
         opacity: .8;
     }
     .skill{
-        width:40%;
+        width:15%;
     }
     .prog{
         height:35px;
@@ -2285,15 +2286,15 @@ for tabs and large phones
     }
     .portfolio{
         height:auto;
-        width: 100%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 1.5%;
         padding-right: 2%;
-    padding-top: 50px;
-    padding-bottom: 40px;
+        padding-top: 50px;
+        padding-bottom: 40px;
     }
     .portfolio-text{
         width: 70%;
@@ -2550,15 +2551,63 @@ for tabs and large phones
             
             
 }
+@media all and (max-width: 1439px) and (min-width: 1024px){
+    .cv{
+        width: 100%;
+        margin-left: 40px;
+    }
+    .portfolio {
+    width: 70%;
+    }
+    .skills-content {
+        width: 70%;
+    }
+    .contect-info-content-line {
+        margin-left: 15%;
+    }
+    .language {
+        margin-left: 2%;
+    }
+}
 
+@media all and (max-width: 1919px) and (min-width: 1441px){
+    .cv{
+        width: 100%;
+        margin-left: 8vh;
+    }
+    .portfolio {
+        width: 40%;
+    }
+    .skills-content {
+        width: 70%;
+    }
+    .contect-info-content-line {
+        margin-left: 30%;
+    }
+    .language {
+        margin-left: 0%;
+    }
+    .header-image img {
+        height: 100vh;
+    }
+    .header-content .firstline {
+        font-size: 100px;
+    }
+    .header-content .secondline {
+        font-size: 60px;
+    }
+    .about-header {
+        font-size: 90px;
+    }
+    .about-first-line {
+    font-size: 44px;
+    }
+    .about-second-line {
+        font-size: 24px;
+    }
 
-
-
-
-
-
-
-@media all and (max-width: 9000px) and (min-width: 1441px){
+}
+@media all and (max-width: 9000px) and (min-width: 1920px){
 
     .portfolio-image img{
         height: 500px;
@@ -2597,7 +2646,7 @@ for tabs and large phones
         font-weight: 200;
     }
     .cv a button{
-        background: transparent;
+        background: #04a777;
         border:none;
         padding: 25px 35px;
         color: whitesmoke;
@@ -2874,6 +2923,7 @@ for tabs and large phones
     .cv {
     width: 100%;
     margin-top: 20px;
+    margin-left: 0px;
     }
 
     .cv a button {
