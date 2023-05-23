@@ -1,6 +1,6 @@
 $(window).on('load', function() {
   gsap.to('#loader', 1, { y: '0'});
-  gsap.to('#loader', 1, { opacity: 0 });
+  gsap.to('#loader', 1, { opacity: 0, delay: 1 });
   gsap.to('#loader', 0, { display: 'none', delay: 3 });
   gsap.to('#header', 0, { display: 'block', delay: 2 });
   gsap.to('.navigation-close', 0, { display: 'none'});
