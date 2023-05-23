@@ -13,7 +13,7 @@ Releases:	https://github.com/adamculpepper/toggle-switchy/releases
 
 /* Colors: Default (blue) */
 .toggle-switchy {color:#fff;}
-.toggle-switchy > input + .toggle:before {content:'ENG';}
+.toggle-switchy > input + .toggle:before {content:'EN';}
 .toggle-switchy > input + .toggle:after {content:'ES';}
 .toggle-switchy > input + .toggle > .switch {background:#fff;}
 .toggle-switchy > input + .toggle + .label {color:#000;}

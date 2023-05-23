@@ -1,8 +1,13 @@
-$(window).on('load',function(){
-  gsap.to('#header',0,{display:"block",delay:1})
-  gsap.to('#navigation-content',0,{display:"none"});
-  gsap.to('#navigation-content',0,{display:"flex",delay:1});
-})
+$(window).on('load', function() {
+  gsap.to('#loader', 1, { y: '0'});
+  gsap.to('#loader', 1, { opacity: 0.5, opacity: 0 });
+  gsap.to('#loader', 0, { display: 'none', delay: 2 });
+  gsap.to('#header', 0, { display: 'block', delay: 2 });
+  gsap.to('.navigation-close', 0, { display: 'none'});
+  gsap.to('#navigation-content', 0, { display: 'none', delay: 1 });
+  gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+});
+
 $(function(){
   $('.color-panel').on("click",function(e) {
     e.preventDefault();
@@ -87,6 +92,8 @@ $(function(){
     $('#about-link').on('click',function(){
       gsap.to('#navigation-content',0,{display:"none",delay:.7});
       gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
+      gsap.to('.menubar',0,{display:"block",delay:.7});
+      gsap.to('.navigation-close',0,{display:"none",delay:.7});
    gsap.to('#breaker',0,{display:"block"});
    gsap.to('#breaker-two',0,{display:"block",delay:.1});
    gsap.to('#breaker',0,{display:"none",delay:2});
@@ -97,6 +104,8 @@ $(function(){
  $('#contact-link').on('click',function(){
    gsap.to('#navigation-content',0,{display:"none",delay:.7});
    gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
+   gsap.to('.menubar',0,{display:"block",delay:.7});
+   gsap.to('.navigation-close',0,{display:"none",delay:.7});
 gsap.to('#breaker',0,{display:"block"});
 gsap.to('#breaker-two',0,{display:"block",delay:.1});
 gsap.to('#breaker',0,{display:"none",delay:2});
@@ -107,6 +116,8 @@ gsap.to('#navigation-content',0,{display:'flex',delay:2});
 $('#portfolio-link').on('click',function(){
   gsap.to('#navigation-content',0,{display:"none",delay:.7});
   gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
+  gsap.to('.menubar',0,{display:"block",delay:.7});
+  gsap.to('.navigation-close',0,{display:"none",delay:.7});
 gsap.to('#breaker',0,{display:"block"});
 gsap.to('#breaker-two',0,{display:"block",delay:.1});
 gsap.to('#breaker',0,{display:"none",delay:2});
@@ -116,6 +127,8 @@ gsap.to('#navigation-content',0,{display:'flex',delay:2});
 $('#home-link').on('click',function(){
   gsap.to('#navigation-content',0,{display:"none",delay:.7});
   gsap.to('#navigation-content',0,{y:'-100%',delay:.7});
+  gsap.to('.menubar',0,{display:"block",delay:.7});
+  gsap.to('.navigation-close',0,{display:"none",delay:.7});
 gsap.to('#breaker',0,{display:"block"});
 gsap.to('#breaker-two',0,{display:"block",delay:.1});
 gsap.to('#breaker',0,{display:"none",delay:2});
@@ -125,28 +138,8 @@ gsap.to('#navigation-content',0,{display:'flex',delay:2});
 })
 
 })
-$(function(){
- var body =  document.querySelector('body');
- var $cursor = $('.cursor')
-   function cursormover(e){
-    
-    gsap.to( $cursor, {
-      x : e.clientX ,
-      y : e.clientY,
-      stagger:.002
-     })
-   }
-   function cursorhover(e){
-    gsap.to( $cursor,{
-     scale:1.4,
-     opacity:1
-    }) 
-  }
-
-})
 // Agrega el evento de click al icono
 document.querySelector('.footer-button').addEventListener('click', scrollToTop);
-
 // Función scrollToTop
 function scrollToTop() {
   const scrollToTop = window.setInterval(function() {
@@ -159,15 +152,17 @@ function scrollToTop() {
   }, 10); // Ajusta el valor 10 para controlar la frecuencia de desplazamiento
 }
 
-
-const btnMode = document.querySelector('#darkmode');
+//--------------------------light mode--------------------------
+const btnMode = document.querySelector('#lightmode');
 const htmlElement = document.querySelector('html');
 const headerElement = document.querySelector('#header');
 const navigationBarElement = document.querySelector('#navigation-bar');
 const navigationContentElement = document.querySelector('#navigation-content');
+const navigationCloseElement = document.querySelector('.navigation-close');
 const aboutElement = document.querySelector('#about');
 const portfolioElement = document.querySelector('#portfolio');
 const contactElement = document.querySelector('#contact');
+const linksElement = document.querySelector('.links');
 const skillsElement = document.querySelector('#skills');
 const footerElement = document.querySelector('.footer');
 
@@ -176,14 +171,16 @@ btnMode.addEventListener('click', () => {
   headerElement.classList.toggle('light');
   navigationBarElement.classList.toggle('light');
   navigationContentElement.classList.toggle('light');
+  navigationCloseElement.classList.toggle('light');
   aboutElement.classList.toggle('light');
   portfolioElement.classList.toggle('light');
   contactElement.classList.toggle('light');
+  linksElement.classList.toggle('light');
   skillsElement.classList.toggle('light');
   footerElement.classList.toggle('light');
 });
 
-
+//--------------------------scroll top--------------------------
 window.addEventListener('scroll', function() {
   var header = document.getElementById('navigation-bar');
   var scrollPosition = window.scrollY || window.pageYOffset;
@@ -196,7 +193,7 @@ window.addEventListener('scroll', function() {
 });
 
 
-//--------------------------Language--------------------------
+//--------------------------Languages--------------------------
 
 const language = document.querySelector("#language");
 language.addEventListener('click', changeLanguage);
@@ -206,6 +203,10 @@ function changeLanguage() {
   const trueSpan = document.querySelector('.true-span');
   const falseSpan = document.querySelector('.false-span');
   const verb = document.getElementById("verb");
+  const homeLink = document.getElementById("home-link");
+  const aboutLink = document.getElementById("about-link");
+  const portfolioLink = document.getElementById("portfolio-link");
+  const contactLink = document.getElementById("contact-link");
   const aboutTitle = document.getElementById("about-title");
   const aboutTitleColor = document.getElementById("about-title-color");
   const aboutCaption = document.getElementById("about-caption");
@@ -225,15 +226,15 @@ function changeLanguage() {
   const titleProject1 = document.getElementById("title-project1");
   const descProject1 = document.getElementById("desc-project1");
   const viewProject1 = document.getElementById("view-project1");
-  const titleProject2 = document.getElementById("title-project2");
-  const descProject2 = document.getElementById("desc-project2");
-  const viewProject2 = document.getElementById("view-project2");
-  const titleProject3 = document.getElementById("title-project3");
-  const descProject3 = document.getElementById("desc-project3");
-  const viewProject3 = document.getElementById("view-project3");
-  const titleProject4 = document.getElementById("title-project4");
-  const descProject4 = document.getElementById("desc-project4");
-  const viewProject4 = document.getElementById("view-project4");
+  // const titleProject2 = document.getElementById("title-project2");
+  // const descProject2 = document.getElementById("desc-project2");
+  // const viewProject2 = document.getElementById("view-project2");
+  // const titleProject3 = document.getElementById("title-project3");
+  // const descProject3 = document.getElementById("desc-project3");
+  // const viewProject3 = document.getElementById("view-project3");
+  // const titleProject4 = document.getElementById("title-project4");
+  // const descProject4 = document.getElementById("desc-project4");
+  // const viewProject4 = document.getElementById("view-project4");
   const contactTitle = document.getElementById("contact-title");
   const contactTitleColor = document.getElementById("contact-title-color");
   const contactCaption = document.getElementById("contact-caption");
@@ -251,14 +252,18 @@ function changeLanguage() {
     trueSpan: { spanish: 'inline', english: 'none' },
     falseSpan: { spanish: 'none', english: 'inline' },
     verb: { spanish: 'Soy un', english: "I'm a" },
+    homeLink: { spanish: 'INICIO', english: 'HOME' },
+    aboutLink: { spanish: 'SOBRE MÍ', english: 'ABOUT ME' },
+    portfolioLink: { spanish: 'PORTAFOLIO', english: 'PORTFOLIO' },
+    contactLink: { spanish: 'CONTACTO', english: 'CONTACT' },
     aboutTitle: { spanish: 'Sobre', english: 'About' },
     aboutTitleColor: { spanish: 'M&iacute;', english: 'Me' },
     aboutCaption: { spanish: '', english: 'Get to Know' },
     aboutCaptionColor: { spanish: 'Con&oacute;ceme', english: 'me.' },
-    aboutFirst: { spanish: 'Soy un creativo', english: "I'm creative" },
-    aboutFirstColor: { spanish: 'desarrollador web', english: 'web developer' },
-    aboutFirst2: { spanish: 'que vive en San Luis, Argentina', english: 'living in San Luis, Argentina' },
-    aboutSecond: { spanish: 'Quien soy yo', english: 'Who are me' },
+    aboutFirst: { spanish: 'Hola, soy', english: "Hello, I'm" },
+    aboutFirstColor: { spanish: 'Angel Rodr&iacute;guez', english: 'Angel Rodr&iacute;guez' },
+    aboutFirst2: { spanish: ', un apasionado desarrollador web con sede en San Luis, Argentina', english: ', a passionate web developer based in San Luis, Argentina' },
+    aboutSecond: { spanish: 'A mis 26 años, me presento como una persona dedicada, responsable y siempre dispuesta a enfrentar nuevos desafíos. En 2022, obtuve mi título de Ingeniero de Sistemas de la UNEFA en Venezuela, lo que me brindó una sólida base académica en sistemas de información. Desde entonces, he invertido tiempo y esfuerzo en estudiar y profundizar en el mundo del diseño y desarrollo web.', english: 'At the age of 26 I present myself as a dedicated, responsible person and always ready to face new challenges. In 2022 I obtained my degree in Systems Engineering from UNEFA in Venezuela, which gave me a solid academic foundation in information systems. Since then, I have invested time and effort in studying and delving into the world of web design and development.' },
     cvEn: { spanish: 'Descargar (CV en ingles)', english: 'Download (CV in English)' },
     cvEs: { spanish: 'Descargar (CV en español)', english: 'Download (CV in Spanish)' },
     skillsTitle: { spanish: 'Mis', english: 'My' },
@@ -267,18 +272,18 @@ function changeLanguage() {
     portfolioTitleColor: { spanish: 'Portafolio', english: 'Portfolio' },
     portfolioCaption: { spanish: 'Algunos de mis', english: 'Some of my' },
     portfolioCaptionColor: { spanish: 'trabajos', english: 'Works' },
-    titleProject1: { spanish: 'Titulo Proyecto 1', english: 'Title Project 1' },
-    descProject1: { spanish: 'Descripcion Proyecto 1', english: 'Description Project 1' },
+    titleProject1: { spanish: 'TotalControl-EE', english: 'TotalControl-EE' },
+    descProject1: { spanish: 'Esta API REST es una aplicación de ASP.NET Core en .NET 7, tiene cuatro servicios que se encargan de realizar diferentes tareas, proporciona endpoints para acceder a recursos relacionados con empleados y registros de ingresos y egresos de los empleados.', english: 'This REST API is an ASP.NET Core application in .NET 7, it has four services that are responsible for performing different tasks, it provides endpoints to access resources related to employees and employee sign-in and sign-out records.' },
     viewProject1: { spanish: 'Ver Proyecto', english: 'View Project' },
-    titleProject2: { spanish: 'Titulo Proyecto 2', english: 'Title Project 2' },
-    descProject2: { spanish: 'Descripcion Proyecto 2', english: 'Description Project 2' },
-    viewProject2: { spanish: 'Ver Proyecto', english: 'View Project' },
-    titleProject3: { spanish: 'Titulo Proyecto 3', english: 'Title Project 3' },
-    descProject3: { spanish: 'Descripcion Proyecto 3', english: 'Description Project 3' },
-    viewProject3: { spanish: 'Ver Proyecto', english: 'View Project' },
-    titleProject4: { spanish: 'Titulo Proyecto 4', english: 'Title Project 4' },
-    descProject4: { spanish: 'Descripcion Proyecto 4', english: 'Description Project 4' },
-    viewProject4: { spanish: 'Ver Proyecto', english: 'View Project' },
+    //titleProject2: { spanish: 'Titulo Proyecto 2', english: 'Title Project 2' },
+    //descProject2: { spanish: 'Descripcion Proyecto 2', english: 'Description Project 2' },
+    // viewProject2: { spanish: 'Ver Proyecto', english: 'View Project' },
+    // titleProject3: { spanish: 'Titulo Proyecto 3', english: 'Title Project 3' },
+    // descProject3: { spanish: 'Descripcion Proyecto 3', english: 'Description Project 3' },
+    // viewProject3: { spanish: 'Ver Proyecto', english: 'View Project' },
+    // titleProject4: { spanish: 'Titulo Proyecto 4', english: 'Title Project 4' },
+    // descProject4: { spanish: 'Descripcion Proyecto 4', english: 'Description Project 4' },
+    // viewProject4: { spanish: 'Ver Proyecto', english: 'View Project' },
     contactTitle: { spanish: '', english: 'Contact' },
     contactTitleColor: { spanish: 'Cont&aacute;ctame', english: 'Me' },
     contactCaption: { spanish: 'en contacto', english: 'In touch' },
@@ -303,6 +308,14 @@ function changeLanguage() {
     trueSpan.style.display = languageContent.trueSpan[lang];
     falseSpan.style.display = languageContent.falseSpan[lang];
     verb.innerHTML = languageContent.verb[lang];
+    homeLink.innerHTML = languageContent.homeLink[lang];
+    homeLink.dataset.text = languageContent.homeLink[lang];
+    aboutLink.innerHTML = languageContent.aboutLink[lang];
+    aboutLink.dataset.text = languageContent.aboutLink[lang];
+    portfolioLink.innerHTML = languageContent.portfolioLink[lang];
+    portfolioLink.dataset.text = languageContent.portfolioLink[lang];
+    contactLink.innerHTML = languageContent.contactLink[lang];
+    contactLink.dataset.text = languageContent.contactLink[lang];
     aboutTitle.innerHTML = languageContent.aboutTitle[lang];
     aboutTitleColor.innerHTML = languageContent.aboutTitleColor[lang];
     aboutCaption.innerHTML = languageContent.aboutCaption[lang];
@@ -322,15 +335,15 @@ function changeLanguage() {
     titleProject1.innerHTML = languageContent.titleProject1[lang];
     descProject1.innerHTML = languageContent.descProject1[lang];
     viewProject1.innerHTML = languageContent.viewProject1[lang];
-    titleProject2.innerHTML = languageContent.titleProject2[lang];
-    descProject2.innerHTML = languageContent.descProject2[lang];
-    viewProject2.innerHTML = languageContent.viewProject2[lang];
-    titleProject3.innerHTML = languageContent.titleProject3[lang];
-    descProject3.innerHTML = languageContent.descProject3[lang];
-    viewProject3.innerHTML = languageContent.viewProject3[lang];
-    titleProject4.innerHTML = languageContent.titleProject4[lang];
-    descProject4.innerHTML = languageContent.descProject4[lang];
-    viewProject4.innerHTML = languageContent.viewProject4[lang];
+    // titleProject2.innerHTML = languageContent.titleProject2[lang];
+    // descProject2.innerHTML = languageContent.descProject2[lang];
+    // viewProject2.innerHTML = languageContent.viewProject2[lang];
+    // titleProject3.innerHTML = languageContent.titleProject3[lang];
+    // descProject3.innerHTML = languageContent.descProject3[lang];
+    // viewProject3.innerHTML = languageContent.viewProject3[lang];
+    // titleProject4.innerHTML = languageContent.titleProject4[lang];
+    // descProject4.innerHTML = languageContent.descProject4[lang];
+    // viewProject4.innerHTML = languageContent.viewProject4[lang];
     contactTitle.innerHTML = languageContent.contactTitle[lang];
     contactTitleColor.innerHTML = languageContent.contactTitleColor[lang];
     contactCaption.innerHTML = languageContent.contactCaption[lang];
@@ -345,7 +358,28 @@ function changeLanguage() {
     contactEmail.innerHTML = languageContent.contactEmail[lang];
   }
 }
-
-// Ejemplo de uso
 changeLanguage();
+
+function toggleMenuBar() {
+  const menubar = document.querySelector('.menubar');
+  const navigationClose = document.querySelector('.navigation-close');
+
+  if (menubar.style.display === 'none') {
+    menubar.style.display = ''; // Retirar el estilo display: none;
+    navigationClose.style.display = 'none'; // Mostrar navigation-close
+  } else {
+    menubar.style.display = 'none'; // Agregar el estilo display: none;
+    navigationClose.style.display = ''; // Ocultar navigation-close
+  }  
+}
+
+function addClickHandlers() {
+  const menubar = document.querySelector('.menubar');
+  const navigationClose = document.querySelector('.navigation-close');
+
+  menubar.addEventListener('click', toggleMenuBar);
+  navigationClose.addEventListener('click', toggleMenuBar);
+}
+
+document.addEventListener('DOMContentLoaded', addClickHandlers);
 

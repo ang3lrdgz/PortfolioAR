@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Angel Rodr&iacute;guez - Personal Portfolio" />
-	<meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
-	<meta name="author" content="willy wonka" />
+	<meta name="keywords" content="creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
+	<meta name="author" content="Angel Rodr&iacute;guez" />
     <title>Angel Rodr&iacute;guez - Personal Portfolio</title>
   <!--favicon-img--> 
    <link rel="icon" type="image/png" href="images/Logo-AR.ico">
@@ -15,11 +15,24 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/toggle-switchy.css">
     <!--main css file-->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
 </head>
 <body>
     <!--contains all the div-->
     <div id="all">
+    <!--loader-->
+    <div id="loader">
+      <div class="loader-spiner">
+        <div class="face">
+          <div class="circle"></div>
+        </div>
+        <div class="face">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    <!--loader-end-->      
     <!--link-screen-->
         <div id="breaker">
         </div>
@@ -31,10 +44,6 @@
         <div id="navigation-content">
             <div class="logo">
                 <!--img src="images/images/Logo-AR.png" alt="logo"-->
-            </div>
-            <div class="navigation-close">
-                <span class="close-first"></span>
-                <span class="close-second"></span>
             </div>
             <div class="navigation-links">
                 <a href="#header" data-text="HOME" id="home-link" >HOME</a>
@@ -49,10 +58,10 @@
         <div id="navigation-bar">
             <!--a href="#" onclick="scrollToTop(); return false;"><img src="images/images/Logo-AR.png" alt="logo"></a-->
             <div class="mode">
-                <label class="darkmode">
-                    <input id="darkmode" type="checkbox">
-                    <i id="sunny" name="sunny"  class="fa-solid fa-sun sunny"></i>
-                    <i id="moon" name="moon" class="fa-solid fa-moon moon"></i>
+                <label class="lightmode">
+                    <input id="lightmode" type="checkbox">
+                    <i id="sunny" class="fa-solid fa-sun sunny"></i>
+                    <i id="moon" class="fa-solid fa-moon moon"></i>
                     <span class="toogle"></span>
                 </label>
             </div>
@@ -63,6 +72,10 @@
                         <span  class="switch"></span>
                     </span>
                 </label>
+            </div>
+            <div class="navigation-close">
+              <span class="close-first"></span>
+              <span class="close-second"></span>
             </div>
             <div class="menubar">
                 <span class="first-span"></span>
@@ -77,8 +90,8 @@
               <!--Social Media Links-->
             <div class="social-media-links">
                 
-                <a href="#"><i class="fa-brands fa-linkedin social-media"></i></a>
-                <a href="#"><i class="fa-brands fa-github social-media"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/angelrdgz/"><i class="fa-brands fa-linkedin social-media"></i></a>
+                <a target="_blank" href="https://github.com/ang3lrdgz"><i class="fa-brands fa-github social-media"></i></a>
 
             </div>
             <!--Social Media Links end-->
@@ -87,8 +100,8 @@
                 <div class="firstline"><span class="color">Angel </span>Rodr&iacute;guez</div>
                 <div class="secondline">
                 <b id="verb">I'm a</b>
-                    <span class="txt-rotate color true-span" data-period="1200"data-rotate='[ " Ingeniero de Sistemas.", " Desarrollador.", " Apasionado por la tecnolog&iacute;a" ]'></span>
-                    <span class="txt-rotate color false-span" data-period="1200"data-rotate='[ " Systems Engineer.", " Developer.", " Passionate about technology" ]'></span>
+                    <span class="txt-rotate color true-span" data-period="1200" data-rotate='[ " Ingeniero de Sistemas.", " Desarrollador.", " Apasionado por la tecnolog&iacute;a" ]'></span>
+                    <span class="txt-rotate color false-span" data-period="1200" data-rotate='[ " Systems Engineer.", " Developer.", " Passionate about technology" ]'></span>
                     <span class="slash">|</span>
                 </div>  
             </div>
@@ -121,8 +134,8 @@
                      <br>
                <span id="about-second" class="about-second-line"></span>
                <div class="cv">
-                <a class="cv1" href="#"><button id="cvEn"> </button></a>
-                <a class="cv2" href="#"><button id="cvEs"> </button></a>
+                <a target="_blank" class="cv1" href="images/CV/CV_Angel_Rodriguez-EN.pdf"><button id="cvEn"> </button></a>
+                <a target="_blank" class="cv2" href="images/CV/CV_Angel_Rodriguez-ES.pdf"><button id="cvEs"> </button></a>
                 </div>
             </div>
             <!--about picture-->
@@ -160,6 +173,14 @@
                           <div class="html-text">Javascript</div>
                         </div>
                       </div>
+                    </div>
+                    <div class="skill-html skill">
+                        <div class="container-skill">
+                            <div class="html">
+                                <i class="fa-brands fa-react skills-icons"></i>
+                                <div class="html-text">React</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skill-html skill">
                         <div class="container-skill">
@@ -207,45 +228,14 @@
              <div id="portfolio-content">
                  <div class="portfolio portfolio-first">
                      <div class="portfolio-image">
-                        <img src="images/portfolio-first.jpg" alt="portfolio-first">
+                        <img src="images/API.png" alt="portfolio-first">
                      </div>
                      <div class="portfolio-text">
                          <h2 id="title-project1"></h2>
                          <p id="desc-project1"></p>
-                         <div class="button"><a href="#"><button><span id="view-project1" class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
+                         <div class="button"><a target="_blank" href="https://github.com/ang3lrdgz/TotalControl-EE"><button><span id="view-project1" class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
                      </div>
                  </div>
-                 <div class="portfolio portfolio-second">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio-second.jpg" alt="portfolio-second">
-                    </div>
-                    <div class="portfolio-text">
-                        <h2 id="title-project2"></h2>
-                        <p id="desc-project2"></p>
-                        <div class="button"><a href="#"><button><span id="view-project2" class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
-             
-                <div class="portfolio portfolio-third">
-                    <div class="portfolio-image">
-                        <img src="images/portfolio-third.jpg" alt="portfolio-third">
-                    </div>
-                    <div class="portfolio-text">
-                        <h2 id="title-project3"></h2>
-                        <p id="desc-project3"></p>
-                            <div class="button"><a href="#"><button><span id="view-project3" class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
-                <div class="portfolio portfolio-fourth">
-                    <div class=" portfolio-image">
-                        <img src="images/portfolio-fourth.jpg" alt="portfolio-fourth">
-                    </div>
-                    <div class="portfolio-text">
-                        <h2 id="title-project4"></h2>
-                        <p id="desc-project4"></p>
-                            <div class="button"><a href="#"><button><span id="view-project4" class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
                  </div>
              </div>
         <!--portfolio end-->
@@ -262,8 +252,10 @@
                         <i class="fa-brands fa-linkedin icon"></i>
                     </div>
                     <div class="contact-info-icon-text">
-                        <h6 id="contactn">Linkedin</h6>
-                        <p id="contact-linkedin"">Angel Rodr&iacute;guez</p>
+                        <a class="links" target="_blank" href="https://www.linkedin.com/in/angelrdgz/">
+                            <h6 id="contactn">Linkedin</h6>
+                            <p id="contact-linkedin">Angel Rodr&iacute;guez</p>
+                        </a>
                   </div>
                 </div>
                 <div class="contect-info-content-line">
@@ -289,8 +281,10 @@
                     <i class="fa-brands fa-whatsapp icon"></i>
                 </div>
                 <div class="contact-info-icon-text">
-                    <h6 id="contactw">Whatsapp</h6>
-                    <p id="contact-whatsapp">+54 9 266 4867847</p>
+                    <a class="links" target="_blank" href="https://wa.me/5492664867847">
+                        <h6 id="contactw">Whatsapp</h6>
+                        <p id="contact-whatsapp">+54 9 266 4867847</p>
+                    </a>
               </div>
               </div>              
               <div class="contect-info-content-line">
@@ -298,8 +292,10 @@
                     <i class="fa-solid fa-at icon"></i>
                 </div>
                   <div class="contact-info-icon-text">
-                      <h6 id="contacte">Email</h6>
-                      <p id="contact-email">Info@example.com</p>
+                      <a class="links" target="_blank" href="https://mail.google.com/mail/?view=cm&to=angelrdgz.sist@gmail.com">
+                          <h6 id="contacte">Email</h6>
+                          <p id="contact-email">Info@example.com</p>
+                      </a>
                 </div>
               </div>
                 </div>
