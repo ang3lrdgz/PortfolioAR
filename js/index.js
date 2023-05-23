@@ -1,6 +1,6 @@
 $(window).on('load', function() {
   gsap.to('#loader', 1, { y: '0'});
-  gsap.to('#loader', 1, { opacity: 0.5, opacity: 0 });
+  gsap.to('#loader', 1, { opacity: 0 });
   gsap.to('#loader', 0, { display: 'none', delay: 2 });
   gsap.to('#header', 0, { display: 'block', delay: 2 });
   gsap.to('.navigation-close', 0, { display: 'none'});
@@ -261,7 +261,7 @@ function changeLanguage() {
     aboutCaption: { spanish: '', english: 'Get to Know' },
     aboutCaptionColor: { spanish: 'Con&oacute;ceme', english: 'me.' },
     aboutFirst: { spanish: 'Hola, soy', english: "Hello, I'm" },
-    aboutFirstColor: { spanish: 'Ángel Rodr&iacute;guez', english: 'Angel Rodr&iacute;guez' },
+    aboutFirstColor: { spanish: '&Aacute;ngel Rodr&iacute;guez', english: '&Aacute;ngel Rodr&iacute;guez' },
     aboutFirst2: { spanish: ', un apasionado desarrollador web con sede en San Luis, Argentina', english: ', a passionate web developer based in San Luis, Argentina' },
     aboutSecond: { spanish: 'A mis 26 años, me presento como una persona dedicada, responsable y siempre dispuesta a enfrentar nuevos desafíos. En 2022, obtuve mi título de Ingeniero de Sistemas de la UNEFA en Venezuela, lo que me brindó una sólida base académica en sistemas de información. Desde entonces, he invertido tiempo y esfuerzo en estudiar y profundizar en el mundo del diseño y desarrollo web.', english: 'At the age of 26 I present myself as a dedicated, responsible person and always ready to face new challenges. In 2022 I obtained my degree in Systems Engineering from UNEFA in Venezuela, which gave me a solid academic foundation in information systems. Since then, I have invested time and effort in studying and delving into the world of web design and development.' },
     cvEn: { spanish: 'Descargar (CV en inglés)', english: 'Download (CV in English)' },
