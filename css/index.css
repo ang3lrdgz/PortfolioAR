@@ -8,8 +8,8 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 ::-webkit-scrollbar{
@@ -86,7 +86,7 @@ input[type=number] {
     height: 100%;
     color: #04A777;
     border-color: currentColor transparent transparent currentColor;
-    border-width: 0.2em 0.2em 0em 0em;
+    border-width: 0.2em 0.2em 0 0;
     --deg: -45deg;
     animation-direction: normal;
     transition: .8s ease-in-out;
@@ -97,7 +97,7 @@ input[type=number] {
     height: 70%;
     color: #04A777;
     border-color: currentColor currentColor transparent transparent;
-    border-width: 0.2em 0em 0em 0.2em;
+    border-width: 0.2em 0 0 0.2em;
     --deg: -135deg;
     animation-direction: reverse;
     transition: .8s ease-in-out;
@@ -187,7 +187,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.8s ease;
+    transition: .8s ease-in-out;
 }
 #navigation-content.light {
     transition: .8s ease-in-out;
@@ -218,14 +218,14 @@ body{
 }
 #navigation-bar.light .first-span::before,
 #navigation-bar.light .second-span::before,
-#navigation-bar.light .third-span::before 
+#navigation-bar.light .third-span::before
 {
     transition: .8s ease-in-out;
     background-color: #000000;
 }
 #navigation-bar.scrolled {
     background-color: #171717c8;
-    transition: 1s ease;
+    transition: .8s ease;
 }
 #navigation-bar.light.scrolled {
     background-color: #f8f8f8be;
@@ -252,7 +252,7 @@ body{
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    display: flex;  
+    display: flex;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -286,7 +286,7 @@ input:checked~.sunny {
     transform: rotate(360deg) scale(0);
 }
 .toggle-switchy {
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
 }
 
 .toogle {
@@ -295,7 +295,7 @@ input:checked~.sunny {
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    box-shadow: 
+    box-shadow:
         inset 0 8px 60px rgba(0, 0, 0, .1),
         inset 0 8px 8px rgba(0, 0, 0, .1),
         inset 0 -4px -4px rgba(0, 0, 0, .1);
@@ -440,8 +440,7 @@ input:checked~.toogle {
     height: auto;
     background-size: cover;
     background-position: center;
-    width: 40%;   
-    height: 100vh;
+    width: 40%;
 
 }
 .header-image .svgheader{
@@ -456,7 +455,7 @@ input:checked~.toogle {
     align-items: center;
     justify-content: center;
     color: whitesmoke;
-    font-family: raleway;
+    font-family: raleway, sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     flex-direction: column;
@@ -474,14 +473,13 @@ input:checked~.toogle {
 .header-content .firstline{
     z-index: 2;
     font-weight:700;
-    font-family: poppins;
+    font-family: poppins , sans-serif;
     transition: .8s ease-in-out;
     font-size: 60px;
 }
 .header-content .secondline{
     z-index: 2;
     font-size: 30px;
-    padding-top:20px ;
     font-weight:500;
     color: rgb(255, 255, 255,.8);
     padding: 5% 10%;
@@ -569,7 +567,7 @@ input:checked~.toogle {
     align-items: center;
     font-size: 5em;
     font-weight: 400;
-    font-family: monoton;
+    font-family: monoton, sans-serif;
     color:rgb(255, 255, 255,.1);
     z-index: 1;
     pointer-events: none;
@@ -679,11 +677,9 @@ input:checked~.toogle {
     align-items: center;
     justify-content: center;
     font-size: 45px;
-    font-family: raleway;
+    font-family: raleway , sans-serif;
     color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
+    padding:60px 10px 30px;
     font-weight: 900;
     transition: .8s ease-in-out;
 }
@@ -695,7 +691,7 @@ input:checked~.toogle {
     color: whitesmoke;
     justify-content: center;
     font-size: 20px;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     width: 50%;
     padding: 30px;
     font-weight: 400;
@@ -748,14 +744,13 @@ input:checked~.toogle {
 .about-img {
     width: 550px;
     height:auto;
-    padding: 30px;
-    padding-top: 10px;
+    padding: 10px 30px 30px;
     border-radius: 40px;
 }
 
 #about-content a{
     text-decoration: none;
-    font-family: aileron;
+    font-family: aileron, sans-serif;
     font-weight: 400;
     font-size: 35px;
     color: #04A777;
@@ -766,16 +761,15 @@ input:checked~.toogle {
     width: 60%;
     display: flex;
     flex-direction: column;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     margin-left: 60px;
     transition: .8s ease-in-out;
 }
 .cv a button{
-    background: transparent;
+    background: #04A777;
     border:none;
     padding: 15px 30px;
     color: whitesmoke;
-    background: #04A777;
     outline: none;
     font-size:20px;
     border-radius: 4px;
@@ -808,11 +802,9 @@ input:checked~.toogle {
     align-items: center;
     justify-content: center;
     font-size: 45px;
-    font-family: raleway;
+    font-family: raleway , sans-serif;
     color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding:30px 10px 30px;
     font-weight: 900;
 
 }
@@ -844,7 +836,7 @@ input:checked~.toogle {
     background-color: #191919;
     ;
     display: inline-block;
-    box-shadow:0px 0px 25px rgb(0,0,0,.05);
+    box-shadow:0 0 25px rgb(0,0,0,.05);
     position: relative;
     text-align: center;
     z-index: 2;
@@ -863,17 +855,17 @@ input:checked~.toogle {
     margin: 20px;
     border-radius: 30%;
     padding: 10px;
-    border: 0px solid #04A777;
+    border: 0 solid #04A777;
     background: #04A777;
-    box-shadow:0px 0px 0px 0px #04A777 ;
+    box-shadow:0 0 0 0 #04A777 ;
     height:100px;
     transition: all .8s ease;
 }
 .service:hover .service-img img{
-    box-shadow:0px 0px 0px 400px #04A777 ;
+    box-shadow:0 0 0 400px #04A777 ;
 }
 .service-description{
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     color:whitesmoke;
     position: relative;
     display: inline-block;
@@ -902,11 +894,9 @@ input:checked~.toogle {
     align-items: center;
     justify-content: center;
     font-size: 45px;
-    font-family: raleway;
+    font-family: raleway, sans-serif;
     color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding:30px;
     font-weight: 900;
     transition: .8s ease-in-out;
 }
@@ -917,16 +907,13 @@ input:checked~.toogle {
 .skills-content{
     height: auto;
     width:50%;
-    margin: 0px auto;
-    margin-top: 20px;
-    margin-bottom: 80px;
+    margin: 20px auto 80px;
 }
 .skill-html{
     height: auto;
     width: 45%;
-    padding: 0%;
     position: relative;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     color:whitesmoke;
     display: inline-block;
     padding:1.5%;
@@ -959,19 +946,19 @@ input:checked~.toogle {
     justify-content: center;
     align-items: center;
   }
-  
+
   .skill-html {
     width: 100px;
     margin: 30px;
     text-align: center;
   }
-  
+
   .skills-icons {
     font-size: 24px;
     margin-bottom: 5px;
     transition: .8s ease-in-out;
   }
-  
+
   .html-text {
     font-size: 16px;
   }
@@ -979,7 +966,7 @@ input:checked~.toogle {
     font-size: 16px;
     margin-top: -10%;
   }
-  
+
 .skills-icons{
     color: #f8f8f8;
     width:  70px;
@@ -998,9 +985,8 @@ input:checked~.toogle {
     opacity:.8;
     display: block;
     font-size: 20px;
-    font-family: raleway;
+    font-family: raleway, sans-serif;
     padding: 8px;
-    padding-top: 15px;
     color: whitesmoke;
     font-weight: 400;
     transition: .8s ease-in-out;
@@ -1016,11 +1002,9 @@ input:checked~.toogle {
     align-items: center;
     justify-content: center;
     font-size: 45px;
-    font-family: raleway;
+    font-family: raleway, sans-serif;
     color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
+    padding:60px 10px 30px;
     font-weight: 900;
     transition: .8s ease-in-out;
 }
@@ -1062,7 +1046,7 @@ input:checked~.toogle {
     height: 80%;
     width: 100%;
     overflow: hidden;
-    transition: all .65s ease;
+    transition: all 1s ease;
     position: relative;
 }
 .portfolio-date{
@@ -1087,21 +1071,24 @@ input:checked~.toogle {
 .portfolios .img img{
     height: 100%;
     width: 100%;
-    transition: all .65s ease;
-    border-radius: 10px 10px 0px 0px;
+    transition: all 1s ease;
+    border-radius: 10px 10px 0 0;
+}
+#portfolio.light .portfolios .img{
+    transition: all 1s ease;
 }
 .portfolio-text{
   height: 80%;
   width: 100%;
   text-align: center;
   vertical-align: center;
-  font-family: poppins;
+  font-family: poppins, sans-serif;
   color: whitesmoke;
-  transition: all .5s ease;
-  border-radius: 0px 0px 10px 10px;
+  transition: all 1s ease;
+  border-radius: 0 0 10px 10px;
 }
 #portfolio.light .portfolio-text{
-    transition: .8s ease-in-out;
+    transition: all 1s ease;
     color: #000;
 }
 .portfolio-text h3{
@@ -1150,7 +1137,6 @@ input:checked~.toogle {
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    transition: all .4s ease;
     width: 80%;
     height: 50px;
 }
@@ -1161,7 +1147,7 @@ input:checked~.toogle {
 .portfolio-text button::before{
     content: "";
     position: absolute;
-    width: 0%;
+    width: 0;
     height: 200%;
     transform: rotate(0deg) translateY(0px);
     top: 0;
@@ -1205,11 +1191,9 @@ button:hover .index{
     align-items: center;
     justify-content: center;
     font-size: 45px;
-    font-family: raleway;
+    font-family: raleway, sans-serif;
     color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
+    padding:60px 10px 30px;
     font-weight: 900;
     transition: .8s ease-in-out;
 }
@@ -1221,7 +1205,7 @@ button:hover .index{
     padding: 10px;
     color: whitesmoke;
     opacity: .9;
-    font-family:raleway;
+    font-family: raleway, sans-serif;
     font-size: 18px;
     transition: .8s ease-in-out;
 }
@@ -1291,12 +1275,12 @@ form{
     background: #050505;
     border:none;
     color: whitesmoke;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     font-size: 18px;
 }
 .form-header{
     font-size: 24px;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     font-weight: 400;
     color: whitesmoke;
     padding: 28px;
@@ -1310,7 +1294,7 @@ form{
     background: #050505;
     border:none;
     color: whitesmoke;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     font-size: 18px;
 }
 .input-textarea{
@@ -1323,12 +1307,12 @@ form{
     background: #050505;
     border:none;
     color: whitesmoke;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     font-size: 18px;
 }
 form button{
     padding:8px 24px;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     font-size:20px;
     color: whitesmoke;
     background:#BB0035;
@@ -1346,7 +1330,7 @@ form button:hover{
     position: relative;
     z-index: 2;
     font-size: 24px;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     font-weight: 400;
     color: whitesmoke;
     padding: 30px;
@@ -1362,12 +1346,11 @@ form button:hover{
     align-items: center;
     text-align: left;
     margin-left: 140px;
-    transition: .8s ease-in-out;
 }
 .contact-info-icon-text{
     color: whitesmoke;
     padding:15px;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     transition: .8s ease-in-out;
 }
 .text-white {
@@ -1376,6 +1359,8 @@ form button:hover{
 }
 .links {
     text-decoration: none;
+}
+.links.light {
     transition: .8s ease-in-out;
 }
 .text-white.light {
@@ -1384,9 +1369,10 @@ form button:hover{
 }
 .text-white:hover {
     color: #171717;
+    transition: .3s ease-in-out;
 }
 .text-white.light:hover {
-    transition: .8s ease-in-out;
+    transition: .3s ease-in-out;
     color: #f8f8f8;
 }
 .contact-info-icon-text h6{
@@ -1395,7 +1381,7 @@ form button:hover{
 }
 .contact-info-icon-text p{
     font-size: 14px;
-    opacity: .7;
+    opacity: .8;
 }
 .icon{
     font-size: 40px;
@@ -1419,7 +1405,7 @@ form button:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     transition: .8s ease-in-out;
   }
 
@@ -1468,7 +1454,7 @@ form button:hover{
     transition:all .4s ease;
 }
 .color-changer-active{
-    right:0px;
+    right:0;
     transition:all .4s ease;
 }
 .color-panel{
@@ -1551,7 +1537,7 @@ form button:hover{
     width:150px;
     padding: 10px;
     background: whitesmoke;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     font-size: 16px;
     display: flex;
     color: black;
@@ -1584,7 +1570,7 @@ For devices with smaller width like mobile phone
         justify-content: center;
         flex-direction: column;
         color: whitesmoke;
-        font-family: raleway;
+        font-family: raleway, sans-serif;
         font-weight: 500;
         letter-spacing: 2px;
         font-size: 40px;
@@ -1595,7 +1581,7 @@ For devices with smaller width like mobile phone
     .header-image{
         float: right;
         height: auto;
-        width: 0%;
+        width: 0;
     }
     .social-media-links{
         width: 100%;
@@ -1610,7 +1596,7 @@ For devices with smaller width like mobile phone
         justify-content: center;
     }
     .header-content-box{
-        padding-left: 0px;
+        padding-left: 0;
         z-index: 2;
         text-align: center;
     }
@@ -1642,7 +1628,7 @@ For devices with smaller width like mobile phone
         z-index: 2;
         text-align: center;
         height: auto;
-        padding-right: 0px;
+        padding-right: 0;
         width: auto;
     
     }
@@ -1660,7 +1646,7 @@ For devices with smaller width like mobile phone
         color: whitesmoke;
         justify-content: center;
         font-size: 35px;
-        font-family: raleway;
+        font-family: raleway, sans-serif;
         padding:10px;
         font-weight: 900;
     }
@@ -1668,7 +1654,7 @@ For devices with smaller width like mobile phone
         color: whitesmoke;
         justify-content: center;
         font-size: 20px;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         width: 95%;
         padding: 10px;
         font-weight: 400;
@@ -1716,7 +1702,7 @@ For devices with smaller width like mobile phone
         margin: 1.5%;
         background-color: #191919;
         display: inline-block;
-        box-shadow:0px 0px 25px rgb(0,0,0,.1);
+        box-shadow:0 0 25px rgb(0,0,0,.1);
         position: relative;
         text-align: center;
         z-index: 2;
@@ -1749,7 +1735,7 @@ For devices with smaller width like mobile phone
                 display: none;
             }
             .service:hover .service-img img{
-                box-shadow:0px 0px 0px 0px #04A777 ;
+                box-shadow:0 0 0 0 #04A777 ;
             }
             #navigation-bar img{
                 height: 80px;
@@ -1763,9 +1749,7 @@ For devices with smaller width like mobile phone
             .portfolios{
                 height: auto;
                 width: 90%;
-                margin: 10px;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin: 20px 10px 20px;
                 position: relative;
             }
             .portfolios .img{
@@ -1783,7 +1767,7 @@ For devices with smaller width like mobile phone
                 font-size: 18px;
                 text-align: center;
                 font-weight: 400;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 padding: 3px;
                 width: 100%;
                 height: auto;
@@ -1798,7 +1782,7 @@ For devices with smaller width like mobile phone
               width: 100%;
               text-align: center;
               vertical-align: center;
-              font-family: poppins;
+                font-family: poppins, sans-serif;
               color: whitesmoke;
               transition: all .5s ease;
             }
@@ -1858,7 +1842,7 @@ For devices with smaller width like mobile phone
                 width: 90%;
                 display: flex;
                 padding-bottom: 40px;
-                padding-right:0px;
+                padding-right:0;
                 flex-direction: column;
             }
             form{
@@ -1886,16 +1870,15 @@ For devices with smaller width like mobile phone
                 background: #050505;
                 border:none;
                 color: whitesmoke;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size: 16px;
             }
             .form-header{
                 font-size: 22px;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-weight: 400;
                 color: whitesmoke;
                 padding: 20px;
-                padding-top: 0px;
             }
             .input-subject{
                 width: 90%;
@@ -1906,7 +1889,7 @@ For devices with smaller width like mobile phone
                 background: #050505;
                 border:none;
                 color: whitesmoke;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size: 16px;
             }
             .input-textarea{
@@ -1919,12 +1902,12 @@ For devices with smaller width like mobile phone
                 background: #050505;
                 border:none;
                 color: whitesmoke;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size: 16px;
             }
             form button{
                 padding:8px 24px;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size:20px;
                 color: whitesmoke;
                 opacity: .8;
@@ -1941,7 +1924,7 @@ For devices with smaller width like mobile phone
                 position: relative;
                 z-index: 2;
                 font-size: 24px;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-weight: 400;
                 color: whitesmoke;
                 padding: 20px;
@@ -1960,7 +1943,7 @@ For devices with smaller width like mobile phone
             .contact-info-icon-text{
                 color: whitesmoke;
                 padding:15px;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
             }
             .contact-info-icon-text h6{
                 font-size: 15px;
@@ -1994,7 +1977,7 @@ for tabs and large phones
         justify-content: center;
         flex-direction: column;
         color: whitesmoke;
-        font-family: raleway;
+        font-family: raleway, sans-serif;
         font-weight: 500;
         letter-spacing: 2px;
         font-size: 40px;
@@ -2002,7 +1985,7 @@ for tabs and large phones
     .header-image{
         float: right;
         height: auto;
-        width: 0%;   
+        width: 0;
     }
     .social-media-links{
         width: 100%;
@@ -2017,7 +2000,7 @@ for tabs and large phones
         justify-content: center;
     }
     .header-content-box{
-        padding-left: 0px;
+        padding-left: 0;
         z-index: 2;
         text-align: center;
     }
@@ -2072,7 +2055,7 @@ for tabs and large phones
         color: whitesmoke;
         justify-content: center;
         font-size: 45px;
-        font-family: raleway;
+        font-family: raleway, sans-serif;
         padding:15px;
         font-weight: 900;
     }
@@ -2080,7 +2063,7 @@ for tabs and large phones
         color: whitesmoke;
         justify-content: center;
         font-size: 40px;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         width: 95%;
         padding: 25px;
         font-weight: 400;
@@ -2119,7 +2102,6 @@ for tabs and large phones
         width: 550px;
         height:auto;
         padding: 30px;
-        padding-top: 10px;
         border-radius: 40px;
     }
     .cv a button{
@@ -2128,7 +2110,7 @@ for tabs and large phones
         color: whitesmoke;
         outline: none;
         font-size:20px;
-        font-family: Poppins;
+        font-family: poppins, sans-serif;
         border-radius: 8px;
         font-weight: 400;
         cursor: pointer;
@@ -2142,7 +2124,7 @@ for tabs and large phones
         margin: 2%;
         background-color: #191919;
         display: inline-block;
-        box-shadow:0px 0px 25px rgb(0,0,0,.1);
+        box-shadow:0 0 25px rgb(0,0,0,.1);
         position: relative;
         text-align: center;
         z-index: 2;
@@ -2179,7 +2161,7 @@ for tabs and large phones
                 display: none;
             }
             .service:hover .service-img img{
-                box-shadow:0px 0px 0px 0px #04A777 ;
+                box-shadow:0 0 0 0 #04A777 ;
             }
             #navigation-bar img{
                 height: 80px;
@@ -2192,9 +2174,7 @@ for tabs and large phones
             .portfolios{
                 height: auto;
                 width: 75%;
-                margin: 10px;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin: 20px 10px 20px;
                 position: relative;
             }
             .portfolios .img{
@@ -2212,7 +2192,7 @@ for tabs and large phones
                 font-size: 18px;
                 text-align: center;
                 font-weight: 400;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 padding: 3px;
                 width: 100%;
                 height: auto;
@@ -2227,7 +2207,7 @@ for tabs and large phones
               width: 100%;
               text-align: center;
               vertical-align: center;
-              font-family: poppins;
+              font-family: poppins, sans-serif;
               color: whitesmoke;
               padding: 10px;
               transition: all .5s ease;
@@ -2288,7 +2268,7 @@ for tabs and large phones
                 width: 90%;
                 display: flex;
                 padding-bottom: 40px;
-                padding-right:0px;
+                padding-right:0;
                 flex-direction: column;
             }
             form{
@@ -2316,16 +2296,15 @@ for tabs and large phones
                 background: #050505;
                 border:none;
                 color: whitesmoke;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size: 16px;
             }
             .form-header{
                 font-size: 22px;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-weight: 400;
                 color: whitesmoke;
                 padding: 20px;
-                padding-top: 0px;
             }
             .input-subject{
                 width: 80%;
@@ -2336,7 +2315,7 @@ for tabs and large phones
                 background: #050505;
                 border:none;
                 color: whitesmoke;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size: 16px;
             }
             .input-textarea{
@@ -2349,12 +2328,12 @@ for tabs and large phones
                 background: #050505;
                 border:none;
                 color: whitesmoke;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size: 16px;
             }
             form button{
                 padding:8px 24px;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-size:20px;
                 color: whitesmoke;
                 opacity: .8;
@@ -2371,7 +2350,7 @@ for tabs and large phones
                 position: relative;
                 z-index: 2;
                 font-size: 24px;
-                font-family: poppins;
+                font-family: poppins, sans-serif;
                 font-weight: 400;
                 color: whitesmoke;
                 padding: 20px;
@@ -2421,7 +2400,7 @@ for tabs and large phones
         margin-left: 30%;
     }
     .language {
-        margin-left: 0%;
+        margin-left: 0;
     }
     .header-image img {
         height: 100vh;
@@ -2482,7 +2461,7 @@ for tabs and large phones
         color: whitesmoke;
         outline: none;
         font-size:30px;
-        font-family: aileron;
+        font-family: poppins, sans-serif;
         border-radius: 4px;
         font-weight: 400;
         cursor: pointer;
@@ -2497,7 +2476,7 @@ for tabs and large phones
         padding: 10px;
         background-color: #191919;
         display: inline-block;
-        box-shadow:0px 0px 25px rgb(0,0,0,.05);
+        box-shadow:0 0 25px rgb(0,0,0,.05);
         position: relative;
         text-align: center;
         z-index: 2;
@@ -2534,9 +2513,7 @@ for tabs and large phones
     .portfolios{
         height: 420px;
         width: 30%;
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin: 50px auto;
         position: relative;
         overflow: hidden;
     }
@@ -2555,7 +2532,7 @@ for tabs and large phones
         font-size: 18px;
         text-align: center;
         font-weight: 400;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         padding: 3px;
         width: 100%;
         height: auto;
@@ -2570,7 +2547,7 @@ for tabs and large phones
       width: 100%;
       text-align: center;
       vertical-align: center;
-      font-family: poppins;
+      font-family: poppins, sans-serif;
       color: whitesmoke;
       background-color: #050505;
       transition: all .5s ease;
@@ -2603,18 +2580,16 @@ for tabs and large phones
         align-items: center;
         justify-content: center;
         font-size: 45px;
-        font-family: raleway;
+        font-family: raleway, sans-serif;
         color: whitesmoke;
-        padding:10px;
-        padding-bottom: 30px;
-        padding-top: 60px;
+        padding: 60px 10px 30px;
         font-weight: 900;
     }
     .contact-header-caption{
         padding: 10px;
         color: whitesmoke;
         opacity: .9;
-        font-family:raleway;
+        font-family:raleway, sans-serif;
         font-size: 18px;
     }
     .contact-content{
@@ -2678,16 +2653,15 @@ for tabs and large phones
         background: #050505;
         border:none;
         color: whitesmoke;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         font-size: 18px;
     }
     .form-header{
         font-size: 24px;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         font-weight: 400;
         color: whitesmoke;
-        padding: 20px;
-        padding-top: 0px;
+        padding: 0 20px 20px;
     }
     .input-subject{
         width: 60%;
@@ -2698,7 +2672,7 @@ for tabs and large phones
         background: #050505;
         border:none;
         color: whitesmoke;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         font-size: 18px;
     }
     .input-textarea{
@@ -2711,12 +2685,12 @@ for tabs and large phones
         background: #050505;
         border:none;
         color: whitesmoke;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         font-size: 18px;
     }
     form button{
         padding:8px 24px;
-        font-family: poppins;
+        font-family: poppins, sans-serif;
         font-size:20px;
         color: whitesmoke;
         opacity: .8;
@@ -2754,7 +2728,7 @@ for tabs and large phones
     .cv {
     width: 100%;
     margin-top: 20px;
-    margin-left: 0px;
+    margin-left: 0;
     }
 
     .cv a button {
@@ -2768,7 +2742,7 @@ for tabs and large phones
       }
     .html {
         left: -40%;
-        top: 0%;
+        top: 0;
     }
     .skill {
         width: 15%;
