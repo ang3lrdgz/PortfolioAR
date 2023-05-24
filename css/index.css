@@ -57,11 +57,11 @@ input[type=number] {
       position: fixed;
       z-index:100;
       font-family: Poppins, sans-serif;
-      background-color: #171717;
+      background-color: #000000;
       color: whitesmoke;
       font-size: 70px;
       width: 100%;
-      transition: 1s ease-in-out;
+      transition: .8s ease-in-out;
   }
   .loader-spiner {
     width: 20em;
@@ -82,8 +82,8 @@ input[type=number] {
 }
 
 .loader-spiner .face:nth-child(1) {
-    width: 40%;
-    height: 40%;
+    width: 100%;
+    height: 100%;
     color: #04A777;
     border-color: currentColor transparent transparent currentColor;
     border-width: 0.2em 0.2em 0em 0em;
@@ -93,8 +93,8 @@ input[type=number] {
 }
 
 .loader-spiner .face:nth-child(2) {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     color: #04A777;
     border-color: currentColor currentColor transparent transparent;
     border-width: 0.2em 0em 0em 0.2em;
@@ -1800,7 +1800,6 @@ For devices with smaller width like mobile phone
               vertical-align: center;
               font-family: poppins;
               color: whitesmoke;
-              background-color: #000000;
               transition: all .5s ease;
             }
             .portfolio-text h3{
@@ -2230,7 +2229,6 @@ for tabs and large phones
               vertical-align: center;
               font-family: poppins;
               color: whitesmoke;
-              background-color: #050505;
               padding: 10px;
               transition: all .5s ease;
             }
