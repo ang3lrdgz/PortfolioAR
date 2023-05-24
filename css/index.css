@@ -1,6 +1,6 @@
 /*!
   * Item: Willy Wonka Theme
-  * Description: Personal Portfolio Website Template
+  * Description: Personal Portfolio
   * Author/Developer: Sujal
   * Version: v1
   */
@@ -54,7 +54,7 @@ input[type=number] {
       position: fixed;
       z-index:100;
       font-family: Poppins, sans-serif;
-      background-color: #202020;
+      background-color: #171717;
       color: whitesmoke;
       font-size: 70px;
       width: 100%;
@@ -78,8 +78,8 @@ input[type=number] {
 }
 
 .loader-spiner .face:nth-child(1) {
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 40%;
     color: #04A777;
     border-color: currentColor transparent transparent currentColor;
     border-width: 0.2em 0.2em 0em 0em;
@@ -88,8 +88,8 @@ input[type=number] {
 }
 
 .loader-spiner .face:nth-child(2) {
-    width: 75%;
-    height: 75%;
+    width: 60%;
+    height: 60%;
     color: #04A777;
     border-color: currentColor currentColor transparent transparent;
     border-width: 0.2em 0em 0em 0.2em;
@@ -97,8 +97,8 @@ input[type=number] {
     animation-direction: reverse;
 }
 .loader-spiner .face:nth-child(3) {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     color: #04A777;
     border-color: currentColor transparent transparent currentColor;
     border-width: 0.2em 0.2em 0em 0em;
@@ -106,8 +106,8 @@ input[type=number] {
     animation-direction: normal;
 }
 .loader-spiner .face:nth-child(4) {
-    width: 35%;
-    height: 35%;
+    width: 100%;
+    height: 100%;
     color: #04A777;
     border-color: currentColor currentColor transparent transparent;
     border-width: 0.2em 0em 0em 0.2em;
@@ -145,7 +145,7 @@ input[type=number] {
 
 @keyframes animate {
     to {
-        transform: rotate(1turn);
+        transform: rotate(1.2turn);
     }
 }
 body{
@@ -543,7 +543,7 @@ input:checked~.toogle {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family:poppins;
+    font-family: Poppins, sans-serif;
 }
 .navigation-links a{
     padding:10px;
@@ -973,24 +973,6 @@ input:checked~.toogle {
     color: #000;
     fill: #000;
 }
-.portfolio-header{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    transition: all .4s ease;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    font-weight: 900;
-}
-#portfolio.light .portfolio-header {
-    color: #000;
-}
 
 .header-caption{
     opacity:.8;
@@ -1002,160 +984,10 @@ input:checked~.toogle {
     color: whitesmoke;
     font-weight: 400;
 }
-#portfolio.light .header-caption {
-    color: #000;
-}
-
 #about.light .header-caption {
     color: #000;
 }
-.portfolio{
-    height: auto;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5%;
-    padding-right: 2%;
-    padding-top: 50px;
-    padding-bottom: 40px;
-}
-
-.portfolio-text{
-    width: 53%;
-    padding-left: 1%;
-    margin: 1%;
-    margin-left: -80px;
-    margin-top: 60px;
-    z-index: 3;
-    opacity: 1;
-    background: #080808;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-#portfolio.light .portfolio-text {
-    background: #04a777;
-    color: #171717;
-}
-
-
-.portfolio-text h2{
-    font-size: 35px;
-    font-family: poppins;
-    font-weight: 200;
-    padding: 20px;
-    color: #04A777;
-    transition: all .4s ease;
-}
-#portfolio.light .portfolio-text h2 {
-    color: #f8f8f8;
-}
-.portfolio-text p{
-    font-size: 16px;
-    opacity: .8;
-    font-family: poppins;
-    font-weight: 200;
-    padding: 20px;
-}
-.portfolio-text button{
-    font-size: 16px;
-    opacity: .8;
-    font-family: poppins;
-    font-weight: 200;
-    padding: 10px 20px;
-    background:transparent;
-    color:#04A777;
-    transition: all .4s ease;
-    outline: none;
-    margin: 20px;
-    border: 1.5px solid #04A777;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    transition: all .4s ease;
-}
-#portfolio.light .portfolio-text button {
-    color: #f8f8f8;
-    border: 1.5px solid #f8f8f8;
-}
-.portfolio-text button::before{
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 200%;
-    transform: rotate(-15deg) translateY(-20px);
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background: #04A777;
-    transition: all .7s ease;
-}
-#portfolio.light .portfolio-text button::before {
-    background: #f8f8f8;
-}
-.portfolio-text button:hover{
-    opacity: 1;
-    color:whitesmoke;
-}
-#portfolio.light .portfolio-text button:hover {
-    color: #04A777;
-}
- button:hover .index{
-     position: relative;
-    z-index: 4;
-}
-.portfolio-text button:hover::before{
-    opacity: 1;
-    width: 120%;
-}
-.button{
-    text-align: center;
-}
-    .portfolio-image img{
-        height: 310px;
-        width: 100%;
-        position: relative;
-    }
-    .portfolio-image{
-        height: 400px;
-        width: 54%;
-    }
-.portfolio-image img::before{
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: #04A777;
-    opacity: .1;
-    top: 0;
-    left: 0;
-    transition: all .4s ease;
-    position: absolute;
-    z-index: 2;
-}
-#portfolio-content{
-    width: 100%;
-    display: flex;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    overflow: hidden;
-    flex-wrap: wrap;
-}
-#portfolio{
-    height: auto;
-    overflow-x: hidden;
-    background-color: #171717;
-    width: 100%;
-    color:whitesmoke;
-    transition: .8s ease-in-out;
-}
-#portfolio.light {
-    transition: .8s ease-in-out;
-    background: #f8f8f8;
-}
-.blog-header{
+.portfolio-header{
     height: auto;
     width: 100%;
     text-align: center;
@@ -1169,50 +1001,30 @@ input:checked~.toogle {
     padding-top: 60px;
     font-weight: 900;
 }
-.cursor{
-    height: 50px;
-    width: 50px;
-    display: block;
-    border-radius: 50%;
-    border: 1px solid whitesmoke;
-    background: transparent;
-    pointer-events: none;
-    position: fixed;
-    top: -25px;
-    left: -25px;
-    z-index: 10;
-    opacity: .6;
-    transition:  scale .5s ease;
-}
-.cursor-small{
-    height: 50px;
-    width: 50px;
-    display: block;
-    border-radius: 50%;
-    border: 1px solid whitesmoke;
-    background: transparent;
-    pointer-events: none;
-    position: fixed;
-    top: -25px;
-    left: -25px;
-    z-index: 10;
-    opacity: .6;
-    transition:  scale .4s ease;
-}
-
-#blog{
-    background: #101010;
+#portfolio{
+    background: #171717;
     color:whitesmoke;
     width: 100%;
     height: auto;
+    transition: .8s ease-in-out;
 }
-.blog-content{
+#portfolio.light{
+    transition: .8s ease-in-out;
+    background: #f8f8f8;
+}
+#portfolio.light .portfolio-header{
+    color: #000;
+}
+#portfolio.light .header-caption{
+    color: #000;
+}
+.portfolio-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-.blogs{
+.portfolios{
     height: 420px;
     width: 40%;
     margin: 20px;
@@ -1220,67 +1032,127 @@ input:checked~.toogle {
     position: relative;
     overflow: hidden;
 }
-.blogs .img{
+.portfolios .img{
     height: 80%;
     width: 100%;
     overflow: hidden;
     transition: all .65s ease;
     position: relative;
 }
-.blog-date{
+.portfolio-date{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #04A777;
+    background: #04a77759;
     color: whitesmoke;
     font-size: 18px;
     text-align: center;
     font-weight: 400;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     padding: 3px;
     transition: all .4s ease;
-    width: 25%;
+    width: 100%;
     height: auto;
 }
-.blogs .img img{
+#portfolio.light .portfolio-date{
+    color: #000;
+}
+.portfolios .img img{
     height: 100%;
     width: 100%;
     transition: all .65s ease;
+    border-radius: 10px 10px 0px 0px;
 }
-.blog-text{
+.portfolio-text{
   height: 80%;
   width: 100%;
   text-align: center;
   vertical-align: center;
   font-family: poppins;
   color: whitesmoke;
-  background-color: #050505;
   transition: all .5s ease;
+  border-radius: 0px 0px 10px 10px;
 }
-.blog-text h3{
+#portfolio.light .portfolio-text{
+  color: #000;
+}
+.portfolio-text h3{
   font-size: 28px;
   font-weight: 500;
   height: 20%;
   padding: 20px;
   letter-spacing: 1px;
 }
-.blog-text p{
+.portfolio-text p{
     font-size: 18px;
     opacity: .9;
     font-weight: 400;
+    margin-top: 20px;
     height: 80%;
     padding: 30px;
     letter-spacing: 1px;
+    border: #04A777 1px solid;
+    border-radius: 10px;
   }
-.blogs:hover .img{
-      transform: translateY(-70%);
+.portfolios:hover .img{
+      transform: translateY(-100%);
   }
-.blogs:hover .blog-text{
-    transform: translateY(-70%);
+.portfolios:hover .portfolio-text{
+    transform: translateY(-105%);
 }
-.blogs a{
+.portfolios a{
     text-decoration: none;
     color: whitesmoke;
+}
+.portfolio-text button{
+    font-size: 18px;
+    opacity: 0.6;
+    font-family: poppins, sans-serif;
+    font-weight: 200;
+    padding: 10px 20px;
+    background:transparent;
+    color:#f8f8f8;
+    transition: all .4s ease;
+    outline: none;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1.5px solid #04A777;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all .4s ease;
+    width: 80%;
+    height: 50px;
+}
+#portfolio.light .portfolio-text button{
+    color: #000;
+}
+.portfolio-text button::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 200%;
+    transform: rotate(0deg) translateY(0px);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #04A777;
+    transition: all .7s ease;
+}
+.portfolio-text button:hover{
+    opacity: 1;
+    color:whitesmoke;
+}
+button:hover .index{
+    position: relative;
+    z-index: 4;
+}
+.portfolio-text button:hover::before{
+    opacity: 1;
+    width: 120%;
+}
+.button{
+    text-align: center;
 }
 #contact{
     height: auto;
@@ -1677,7 +1549,7 @@ For devices with smaller width like mobile phone
     .header-image{
         float: right;
         height: auto;
-        width: 0%;   
+        width: 0%;
     }
     .social-media-links{
         width: 100%;
@@ -1826,58 +1698,11 @@ For devices with smaller width like mobile phone
         margin-top: 20px;
         margin-bottom: 15px;
     }
-    .portfolio{
-        height:auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1.5%;
-        padding-right: 2%;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    }
-    .portfolio-text{
-        width: 90%;
-        padding-left: 0%;
-        margin: 0%;
-        margin-left: 0px;
-        margin-top: 0px;
-        z-index: 1;
-        background: #070707;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-        .portfolio-image{
-            position: relative;
-        }
-            .portfolio-text h2{
-                font-size: 22px;
-                font-family: poppins;
-                font-weight: 200;
-                padding: 10px;
-            }
-            .portfolio-text p{
-                font-size: 15px;
-                opacity: .8;
-                font-family: poppins;
-                font-weight: 200;
-                padding: 15px;
-            }
             .cursor{
                 display: none;
             }
             .service:hover .service-img img{
                 box-shadow:0px 0px 0px 0px #04A777 ;
-            }
-            .portfolio-image img{
-                height: 300px;
-                width: 100%;
-            }
-            .portfolio-image{
-                height: 300px;
-                width: 90%;
             }
             #navigation-bar img{
                 height: 80px;
@@ -1888,7 +1713,7 @@ For devices with smaller width like mobile phone
                 transition: all .4s ease;
                 display: none;
             }
-            .blogs{
+            .portfolios{
                 height: auto;
                 width: 90%;
                 margin: 10px;
@@ -1896,14 +1721,14 @@ For devices with smaller width like mobile phone
                 margin-bottom: 20px;
                 position: relative;
             }
-            .blogs .img{
+            .portfolios .img{
                 height: 80%;
                 width: 100%;
                 overflow: hidden;
                 transition: all .65s ease;
                 position: relative;
             }
-            .blog-date{
+            .portfolio-date{
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -1913,15 +1738,15 @@ For devices with smaller width like mobile phone
                 font-weight: 400;
                 font-family: poppins;
                 padding: 3px;
-                width: 35%;
+                width: 100%;
                 height: auto;
             }
-            .blogs .img img{
+            .portfolios .img img{
                 height: 100%;
                 width: 100%;
                 transition: all .65s ease;
             }
-            .blog-text{
+            .portfolio-text{
               height: auto;
               width: 100%;
               text-align: center;
@@ -1931,14 +1756,14 @@ For devices with smaller width like mobile phone
               background-color: #000000;
               transition: all .5s ease;
             }
-            .blog-text h3{
+            .portfolio-text h3{
               font-size: 24px;
               font-weight: 200;
               height: 15%;
               padding: 10px;
               letter-spacing: 1px;
             }
-            .blog-text p{
+            .portfolio-text p{
                 font-size: 15px;
                 opacity: .9;
                 font-weight: 200;
@@ -1946,10 +1771,10 @@ For devices with smaller width like mobile phone
                 padding: 20px;
                 letter-spacing: 1px;
               }
-            .blogs:hover .img{
+            .portfolios:hover .img{
                   transform: translateY(0%);
               }
-            .blogs:hover .blog-text{
+            .portfolios:hover .portfolio-text{
                 transform: translateY(0%);
             }
             .contact-content{
@@ -2302,59 +2127,12 @@ for tabs and large phones
         margin-top: 20px;
         margin-bottom: 15px;
     }
-    .portfolio{
-        height:auto;
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1.5%;
-        padding-right: 2%;
-        padding-top: 50px;
-        padding-bottom: 40px;
-    }
-    .portfolio-text{
-        width: 70%;
-        padding-left: 0%;
-        margin: 0%;
-        margin-left: 0px;
-        margin-top: 0px;
-        z-index: 1;
-        background: #080808;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-        .portfolio-image{
-            position: relative;
-        }
-            .portfolio-text h2{
-                font-size: 35px;
-                font-family: poppins;
-                font-weight: 200;
-                padding: 15px;
-            }
-            .portfolio-text p{
-                font-size: 20px;
-                opacity: .8;
-                font-family: poppins;
-                font-weight: 200;
-                padding: 15px;
-            }
+
             .cursor{
                 display: none;
             }
             .service:hover .service-img img{
                 box-shadow:0px 0px 0px 0px #04A777 ;
-            }
-            .portfolio-image img{
-                height: 380px;
-                width: 100%;
-                position: relative;
-            }
-            .portfolio-image{
-                height: 380px;
-                width: 70%;
             }
             #navigation-bar img{
                 height: 80px;
@@ -2364,7 +2142,7 @@ for tabs and large phones
                 opacity: .8;
                 transition: all .4s ease;
             }
-            .blogs{
+            .portfolios{
                 height: auto;
                 width: 75%;
                 margin: 10px;
@@ -2372,14 +2150,14 @@ for tabs and large phones
                 margin-bottom: 20px;
                 position: relative;
             }
-            .blogs .img{
+            .portfolios .img{
                 height: 60%;
                 width: 100%;
                 overflow: hidden;
                 transition: all .65s ease;
                 position: relative;
             }
-            .blog-date{
+            .portfolio-date{
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -2389,15 +2167,15 @@ for tabs and large phones
                 font-weight: 400;
                 font-family: poppins;
                 padding: 3px;
-                width: 35%;
+                width: 100%;
                 height: auto;
             }
-            .blogs .img img{
+            .portfolios .img img{
                 height: 100%;
                 width: 100%;
                 transition: all .65s ease;
             }
-            .blog-text{
+            .portfolio-text{
               height: auto;
               width: 100%;
               text-align: center;
@@ -2408,14 +2186,14 @@ for tabs and large phones
               padding: 10px;
               transition: all .5s ease;
             }
-            .blog-text h3{
+            .portfolio-text h3{
               font-size: 28px;
               font-weight: 200;
               height: 15%;
               padding: 10px;
               letter-spacing: 1px;
             }
-            .blog-text p{
+            .portfolio-text p{
                 font-size: 17px;
                 opacity: .9;
                 font-weight: 200;
@@ -2423,10 +2201,10 @@ for tabs and large phones
                 padding: 20px;
                 letter-spacing: 1px;
               }
-            .blogs:hover .img{
+            .portfolios:hover .img{
                   transform: translateY(0%);
               }
-            .blogs:hover .blog-text{
+            .portfolios:hover .portfolio-text{
                 transform: translateY(0%);
             }
             .contact-content{
@@ -2566,16 +2344,13 @@ for tabs and large phones
             .hire-me-section{
                 display: none;
             }
-            
-            
+
+
 }
 @media all and (max-width: 1439px) and (min-width: 1024px){
     .cv{
         width: 100%;
         margin-left: 40px;
-    }
-    .portfolio {
-    width: 70%;
     }
     .skills-content {
         width: 70%;
@@ -2592,9 +2367,6 @@ for tabs and large phones
     .cv{
         width: 100%;
         margin-left: 8vh;
-    }
-    .portfolio {
-        width: 40%;
     }
     .skills-content {
         width: 70%;
@@ -2627,15 +2399,6 @@ for tabs and large phones
 }
 @media all and (max-width: 9000px) and (min-width: 1920px){
 
-    .portfolio-image img{
-        height: 500px;
-        width: 100%;
-        position: relative;
-    }
-    .portfolio-image{
-        height: 500px;
-        width: 40%;
-    }
     .about-img img{
         width: 100%;
         height:450px;
@@ -2676,7 +2439,7 @@ for tabs and large phones
         cursor: pointer;
         position: relative;
         transition: all .4s ease;
-    
+
     }
     .service{
         height:400px;
@@ -2696,7 +2459,7 @@ for tabs and large phones
     .service-img{
         text-align: center;
     }
-    
+
     .service-img img{
         display: inline-block;
         z-index: 2;
@@ -2719,7 +2482,7 @@ for tabs and large phones
         font-size: 18px;
         opacity: .8;
     }
-    .blogs{
+    .portfolios{
         height: 420px;
         width: 30%;
         margin: auto;
@@ -2728,14 +2491,14 @@ for tabs and large phones
         position: relative;
         overflow: hidden;
     }
-    .blogs .img{
+    .portfolios .img{
         height: 80%;
         width: 100%;
         overflow: hidden;
         transition: all .65s ease;
         position: relative;
     }
-    .blog-date{
+    .portfolio-date{
         position: absolute;
         left: 0;
         bottom: 0;
@@ -2745,15 +2508,15 @@ for tabs and large phones
         font-weight: 400;
         font-family: poppins;
         padding: 3px;
-        width: 25%;
+        width: 100%;
         height: auto;
     }
-    .blogs .img img{
+    .portfolios .img img{
         height: 100%;
         width: 100%;
         transition: all .65s ease;
     }
-    .blog-text{
+    .portfolio-text{
       height: 80%;
       width: 100%;
       text-align: center;
@@ -2763,14 +2526,14 @@ for tabs and large phones
       background-color: #050505;
       transition: all .5s ease;
     }
-    .blog-text h3{
+    .portfolio-text h3{
       font-size: 28px;
       font-weight: 500;
       height: 20%;
       padding: 20px;
       letter-spacing: 1px;
     }
-    .blog-text p{
+    .portfolio-text p{
         font-size: 18px;
         opacity: .9;
         font-weight: 400;
@@ -2778,10 +2541,10 @@ for tabs and large phones
         padding: 30px;
         letter-spacing: 1px;
       }
-    .blogs:hover .img{
+    .portfolios:hover .img{
           transform: translateY(-70%);
       }
-    .blogs:hover .blog-text{
+    .portfolios:hover .portfolio-text{
         transform: translateY(-70%);
     }
     .contact-header{
