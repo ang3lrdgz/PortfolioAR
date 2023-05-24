@@ -40,10 +40,13 @@ input[type=number] {
 }
   html{
     background: #101010;
-    
+    transition: .8s ease-in-out;
+
   }
   html.light {
     background: #f8f8f8;
+    transition: .8s ease-in-out;
+
   }
   #loader{
       display: flex;
@@ -68,6 +71,7 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .8s ease-in-out;
 }
 
 .loader-spiner .face {
@@ -85,6 +89,7 @@ input[type=number] {
     border-width: 0.2em 0.2em 0em 0em;
     --deg: -45deg;
     animation-direction: normal;
+    transition: .8s ease-in-out;
 }
 
 .loader-spiner .face:nth-child(2) {
@@ -95,24 +100,7 @@ input[type=number] {
     border-width: 0.2em 0em 0em 0.2em;
     --deg: -135deg;
     animation-direction: reverse;
-}
-.loader-spiner .face:nth-child(3) {
-    width: 80%;
-    height: 80%;
-    color: #04A777;
-    border-color: currentColor transparent transparent currentColor;
-    border-width: 0.2em 0.2em 0em 0em;
-    --deg: -45deg;
-    animation-direction: normal;
-}
-.loader-spiner .face:nth-child(4) {
-    width: 100%;
-    height: 100%;
-    color: #04A777;
-    border-color: currentColor currentColor transparent transparent;
-    border-width: 0.2em 0em 0em 0.2em;
-    --deg: -135deg;
-    animation-direction: reverse;
+    transition: .8s ease-in-out;
 }
 
 .loader-spiner .face .circle {
@@ -124,6 +112,7 @@ input[type=number] {
     background-color: transparent;
     transform: rotate(var(--deg));
     transform-origin: left;
+    transition: .8s ease-in-out;
 }
 
 .loader-spiner .face .circle::before {
@@ -141,11 +130,12 @@ input[type=number] {
                 0 0 8em,
                 0 0 10em,
                 0 0 0 0.5em rgba(255, 255, 0, 0.1);
+    transition: .8s ease-in-out;
 }
 
 @keyframes animate {
     to {
-        transform: rotate(1.2turn);
+        transform: rotate(1turn);
     }
 }
 body{
@@ -169,9 +159,11 @@ body{
     background: #f8f8f8;
 }
 #header.light .secondline {
+    transition: .8s ease-in-out;
     color: #000000;
 }
 #header.light .firstline {
+    transition: .8s ease-in-out;
     color: #000000;
 }
 #particles{
@@ -195,17 +187,22 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 0.8s ease;
 }
 #navigation-content.light {
+    transition: .8s ease-in-out;
     background-color: #f8f8f8;
 }
 #navigation-content.light .navigation-links a {
+    transition: .8s ease-in-out;
     color: #000;
 }
 #navigation-content.light .navigation-links a::before{
+    transition: .8s ease-in-out;
     color:rgba(11, 3, 3, 0.1);
 }
 #navigation-content.light .navigation-close span{
+    transition: .8s ease-in-out;
     background-color: #000;
 }
 
@@ -217,12 +214,13 @@ body{
     padding: 10px;
     background:transparent;
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: .8s ease-in-out;
 }
 #navigation-bar.light .first-span::before,
 #navigation-bar.light .second-span::before,
 #navigation-bar.light .third-span::before 
 {
+    transition: .8s ease-in-out;
     background-color: #000000;
 }
 #navigation-bar.scrolled {
@@ -231,7 +229,7 @@ body{
 }
 #navigation-bar.light.scrolled {
     background-color: #f8f8f8be;
-    transition: 1s ease;
+    transition: .8s ease-in-out;
 }
 .language {
     position: absolute;
@@ -397,7 +395,8 @@ input:checked~.toogle {
 }
 .navigation-close.light .close-first,
 .navigation-close.light .close-second {
-  background-color: #171717;
+    transition: .8s ease-in-out;
+    background-color: #171717;
 }
 
 .navigation-close:hover{
@@ -476,6 +475,7 @@ input:checked~.toogle {
     z-index: 2;
     font-weight:700;
     font-family: poppins;
+    transition: .8s ease-in-out;
     font-size: 60px;
 }
 .header-content .secondline{
@@ -522,6 +522,7 @@ input:checked~.toogle {
     flex-direction: row;
     align-items:end;
     justify-content: end;
+    transition: .8s ease-in-out;
 }
 .social-media{
     color: white;
@@ -536,6 +537,7 @@ input:checked~.toogle {
     transform: scale(1.1);
 }
 #header.light .social-media {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .navigation-links{
@@ -638,6 +640,7 @@ input:checked~.toogle {
     width: 100%;
     height: auto;
     overflow: hidden;
+
 }
 #about.light {
     transition: .8s ease-in-out;
@@ -682,8 +685,10 @@ input:checked~.toogle {
     padding-bottom: 30px;
     padding-top: 60px;
     font-weight: 900;
+    transition: .8s ease-in-out;
 }
 #about.light .about-header {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .about-first-paragraph{
@@ -694,9 +699,11 @@ input:checked~.toogle {
     width: 50%;
     padding: 30px;
     font-weight: 400;
+    transition: .8s ease-in-out;
 }
 .about-first-paragraph .color{
     font-size: 40px;
+    transition: .8s ease-in-out;
 }
 .about-first-line{
     font-size: 35px;
@@ -704,11 +711,14 @@ input:checked~.toogle {
     margin-bottom: 10px;
     display: block;
     text-align: center;
+    transition: .8s ease-in-out;
 }
 #about.light .about-first-line {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .about-second-line{
+    transition: .8s ease-in-out;
     opacity: .8;
     font-size: 18px;
     font-weight: 200;
@@ -716,6 +726,7 @@ input:checked~.toogle {
     line-height: 1.7;
 }
 #about.light .about-second-line {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .about-main{
@@ -757,7 +768,7 @@ input:checked~.toogle {
     flex-direction: column;
     font-family: poppins;
     margin-left: 60px;
-
+    transition: .8s ease-in-out;
 }
 .cv a button{
     background: transparent;
@@ -776,6 +787,7 @@ input:checked~.toogle {
     margin-top: 20px;
 }
 #about.light .cv a button {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .cv a button:hover{
@@ -809,11 +821,13 @@ input:checked~.toogle {
     align-items: center;
     justify-content: center;
     flex-direction:column ;
+    transition: .8s ease-in-out;
 }
 .colors{
     color: whitesmoke;
 }
 #about.light .colors {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .services-content{
@@ -894,8 +908,10 @@ input:checked~.toogle {
     padding-bottom: 30px;
     padding-top: 30px;
     font-weight: 900;
+    transition: .8s ease-in-out;
 }
 #skills.light .skills-header {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .skills-content{
@@ -914,8 +930,10 @@ input:checked~.toogle {
     color:whitesmoke;
     display: inline-block;
     padding:1.5%;
+    transition: .8s ease-in-out;
 }
 #skills.light .skill-html {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .container-skill{
@@ -951,6 +969,7 @@ input:checked~.toogle {
   .skills-icons {
     font-size: 24px;
     margin-bottom: 5px;
+    transition: .8s ease-in-out;
   }
   
   .html-text {
@@ -971,6 +990,7 @@ input:checked~.toogle {
 }
 #skills.light .skills-icons {
     color: #000;
+    transition: .8s ease-in-out;
     fill: #000;
 }
 
@@ -983,8 +1003,10 @@ input:checked~.toogle {
     padding-top: 15px;
     color: whitesmoke;
     font-weight: 400;
+    transition: .8s ease-in-out;
 }
 #about.light .header-caption {
+    transition: .8s ease-in-out;
     color: #000;
 }
 .portfolio-header{
@@ -1000,6 +1022,7 @@ input:checked~.toogle {
     padding-bottom: 30px;
     padding-top: 60px;
     font-weight: 900;
+    transition: .8s ease-in-out;
 }
 #portfolio{
     background: #171717;
@@ -1013,9 +1036,11 @@ input:checked~.toogle {
     background: #f8f8f8;
 }
 #portfolio.light .portfolio-header{
+    transition: .8s ease-in-out;
     color: #000;
 }
 #portfolio.light .header-caption{
+    transition: .8s ease-in-out;
     color: #000;
 }
 .portfolio-content{
@@ -1023,6 +1048,7 @@ input:checked~.toogle {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    transition: .8s ease-in-out;
 }
 .portfolios{
     height: 420px;
@@ -1055,6 +1081,7 @@ input:checked~.toogle {
     height: auto;
 }
 #portfolio.light .portfolio-date{
+    transition: .8s ease-in-out;
     color: #000;
 }
 .portfolios .img img{
@@ -1074,7 +1101,8 @@ input:checked~.toogle {
   border-radius: 0px 0px 10px 10px;
 }
 #portfolio.light .portfolio-text{
-  color: #000;
+    transition: .8s ease-in-out;
+    color: #000;
 }
 .portfolio-text h3{
   font-size: 28px;
@@ -1095,9 +1123,11 @@ input:checked~.toogle {
     border-radius: 10px;
   }
 .portfolios:hover .img{
-      transform: translateY(-100%);
+    transition: .8s ease-in-out;
+    transform: translateY(-100%);
   }
 .portfolios:hover .portfolio-text{
+    transition: .8s ease-in-out;
     transform: translateY(-105%);
 }
 .portfolios a{
@@ -1125,6 +1155,7 @@ input:checked~.toogle {
     height: 50px;
 }
 #portfolio.light .portfolio-text button{
+    transition: .8s ease-in-out;
     color: #000;
 }
 .portfolio-text button::before{
@@ -1180,8 +1211,10 @@ button:hover .index{
     padding-bottom: 30px;
     padding-top: 60px;
     font-weight: 900;
+    transition: .8s ease-in-out;
 }
 #contact.light .contact-header{
+    transition: .8s ease-in-out;
     color: #000;
 }
 .contact-header-caption{
@@ -1190,8 +1223,10 @@ button:hover .index{
     opacity: .9;
     font-family:raleway;
     font-size: 18px;
+    transition: .8s ease-in-out;
 }
 #contact.light .contact-header-caption{
+    transition: .8s ease-in-out;
     color: #000;
 }
 .contact-content{
@@ -1315,6 +1350,7 @@ form button:hover{
     font-weight: 400;
     color: whitesmoke;
     padding: 30px;
+    transition: .8s ease-in-out;
 }
 .contect-info-content-line{
     height: auto;
@@ -1326,25 +1362,31 @@ form button:hover{
     align-items: center;
     text-align: left;
     margin-left: 140px;
+    transition: .8s ease-in-out;
 }
 .contact-info-icon-text{
     color: whitesmoke;
     padding:15px;
     font-family: poppins;
+    transition: .8s ease-in-out;
 }
 .text-white {
     color: #f8f8f8;
+    transition: .8s ease-in-out;
 }
 .links {
     text-decoration: none;
+    transition: .8s ease-in-out;
 }
 .text-white.light {
+    transition: .8s ease-in-out;
     color: #171717;
 }
 .text-white:hover {
     color: #171717;
 }
 .text-white.light:hover {
+    transition: .8s ease-in-out;
     color: #f8f8f8;
 }
 .contact-info-icon-text h6{
@@ -1359,11 +1401,13 @@ form button:hover{
     font-size: 40px;
     color: #f8f8f8;
     opacity: .8;
+    transition: .8s ease-in-out;
 }
 .icon-contact {
     width: 14%;
 }
 #contact.light .icon-contact i {
+    transition: .8s ease-in-out;
     color: #171717;
 }
 
@@ -1376,10 +1420,12 @@ form button:hover{
     align-items: center;
     justify-content: space-between;
     font-family: poppins;
+    transition: .8s ease-in-out;
   }
 
   .footer.light {
-    color: #171717;
+      transition: .8s ease-in-out;
+        color: #171717;
   }
 
   .footer .footer-text {
@@ -1396,7 +1442,6 @@ form button:hover{
     align-items: center;
     justify-content: flex-end;
     font-size: 40px;
-    transition: color 0.4s ease;
     cursor: pointer;
     z-index: 2;
   }
@@ -1406,7 +1451,8 @@ form button:hover{
   }  
 
   .footer.light .footer-button:hover {
-    color: #f8f8f8;
+      transition: .8s ease-in-out;
+        color: #f8f8f8;
   }
   
 .color-changer{
@@ -1637,6 +1683,7 @@ For devices with smaller width like mobile phone
         display: block;
     }
     .about-second-line{
+        transition: .8s ease-in-out;
         opacity: .8;
         font-size: 18px;
     }
@@ -2050,6 +2097,7 @@ for tabs and large phones
     }
     .about-second-line{
         opacity: .8;
+        transition: .8s ease-in-out;
         font-size: 24px;
     }
     .about-main{
@@ -2381,6 +2429,7 @@ for tabs and large phones
         height: 100vh;
     }
     .header-content .firstline {
+        transition: .8s ease-in-out;
         font-size: 100px;
     }
     .header-content .secondline {
@@ -2393,6 +2442,7 @@ for tabs and large phones
     font-size: 44px;
     }
     .about-second-line {
+        transition: .8s ease-in-out;
         font-size: 24px;
     }
 
@@ -2422,6 +2472,7 @@ for tabs and large phones
          font-size: 46px;
      }
     .about-second-line{
+        transition: .8s ease-in-out;
         opacity: .8;
         font-size: 28px;
         font-weight: 200;
@@ -2684,6 +2735,7 @@ for tabs and large phones
         margin-right: 5vh;
     }
     .header-content .firstline{
+        transition: .8s ease-in-out;
         font-size: 50px;
     }
     .header-content .secondline{
